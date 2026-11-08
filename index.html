@@ -21,11 +21,6 @@
       font-weight: 900;
       text-shadow: 0 0 0.15em #00b7ff, 0 0 0.45em #0066ff;
     }
-
-    #play-video:not([hidden]) {
-      display: block;
-      margin: 1rem auto 0;
-    }
   </style>
 </head>
 <body>
@@ -34,26 +29,23 @@
     <source src="./1108.mp4" type="video/mp4">
     <p><a href="./1108.mp4">Download the Lamborghini video</a>.</p>
   </video>
-  <button id="play-video" type="button" hidden>Play with sound</button>
   <script>
     const video = document.getElementById("homepage-video");
-    const playButton = document.getElementById("play-video");
-
     video.volume = 1;
 
-    async function playVideo() {
+    async function autoplayVideo() {
       try {
         await video.play();
-        playButton.hidden = true;
       } catch (error) {
-        if (error.name === "NotAllowedError") {
-          playButton.hidden = false;
+        if (error.name !== "NotAllowedError") {
+          throw error;
         }
+        video.muted = true;
+        await video.play();
       }
     }
 
-    playButton.addEventListener("click", playVideo);
-    playVideo();
+    autoplayVideo().catch(error => console.warn("Video autoplay failed:", error));
   </script>
 </body>
 </html>
