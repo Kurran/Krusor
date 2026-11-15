@@ -119,15 +119,56 @@ nav a:hover,.socials a:hover  {
 .hero-art  {
    position:absolute;
    inset:0;
-   background:url('assets/twitch-offline.png') 78% center/cover;
-   opacity:.8;
-   transform:scale(1.05);
+   background:#06090d url('assets/car-4.jpg') 60% 52%/cover no-repeat;
+   filter:brightness(1.07) contrast(1.12) saturate(.88);
+   transform:scale(1.025);
 }
 .hero-shade  {
    position:absolute;
    inset:0;
-   background:linear-gradient(90deg,#06090d 0%,#06090df2 24%,#06090d77 58%,#06090d20),linear-gradient(0deg,#06090d,transparent 50%);
+   background:linear-gradient(90deg,#06090d 0%,#06090df8 16%,#06090dd9 31%,#06090d72 54%,#06090d08 84%),
+              linear-gradient(0deg,#06090d 0%,#06090d55 19%,transparent 52%,#06090d66 100%);
 }
+.hero-logo {
+   position:absolute;
+   z-index:1;
+   right:8%;
+   top:10%;
+   width:clamp(125px,17vw,250px);
+   pointer-events:none;
+   filter:drop-shadow(0 12px 24px #000d);
+}
+.hero-logo img {
+   width:100%;
+   opacity:.94;
+}
+.hero-garage-feature {
+   position:absolute;
+   z-index:2;
+   right:6%;
+   bottom:100px;
+   display:flex;
+   flex-direction:column;
+   align-items:flex-start;
+   padding:12px 0 12px 22px;
+   border-left:2px solid var(--blue);
+   background:linear-gradient(90deg,#06090dc9,#06090d05);
+   text-shadow:0 2px 12px #000;
+   transition:transform .25s ease,border-color .25s ease;
+}
+.hero-garage-feature:hover { transform:translateY(-3px); border-color:#fff; }
+.hero-garage-feature>span {
+   color:var(--blue);
+   font:700 10px 'DM Sans',sans-serif;
+   letter-spacing:2px;
+}
+.hero-garage-feature strong {
+   margin-top:4px;
+   font:800 clamp(42px,5.1vw,76px)/.96 'Barlow Condensed',Impact,sans-serif;
+   letter-spacing:1px;
+}
+.hero-garage-feature strong span { font-size:.55em; color:var(--blue); vertical-align:12%; }
+.hero-garage-feature small { margin-top:8px; font-size:10px; font-weight:600; letter-spacing:1.5px; color:#c1d3dc; }
 .hero-content  {
    position:relative;
    margin:0 6%;
@@ -759,10 +800,24 @@ dialog p  {
   }
   .hero  {
      height:auto;
-     min-height:690px;
+     min-height:780px;
+     align-items:flex-start;
   }
+  .hero-art {
+     background-size:auto 59%;
+     background-position:center 88%;
+  }
+  .hero-shade {
+     background:linear-gradient(180deg,#06090d 0%,#06090df8 27%,#06090dba 43%,#06090d27 66%,#06090d9c 87%,#06090d 100%);
+  }
+  .hero-logo { top:52%; right:7%; width:110px; }
+  .hero-garage-feature { right:5%; bottom:64px; padding-left:14px; }
+  .hero-garage-feature strong { font-size:39px; }
+  .hero-garage-feature>span,.hero-garage-feature small { font-size:8px; }
   .hero-content  {
-     padding-top:85px;
+     padding-top:65px;
+     padding-bottom:0;
+     margin:0 5%;
   }
   h1  {
      font-size:clamp(73px,17vw,106px);
@@ -773,7 +828,7 @@ dialog p  {
   }
   .hero-art  {
      background-position:65% center;
-     opacity:.6;
+     opacity:1;
   }
   .hero-bottom  {
      font-size:8px;
