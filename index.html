@@ -1,45 +1,365 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#060d1c"><meta name="description" content="The world of Krusor. Lamborghini nights, Warzone memories and anime obsessions."><title>Krusor — Built different.</title>
-<style>
-:root{color-scheme:dark;--bg:#060d1c;--blue:#2962ff;--cyan:#8beaff;--muted:#94a5be;--line:#23324a}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:#eff5ff;font-family:Arial,Helvetica,sans-serif}button,a{ -webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:6px}[hidden]{display:none!important}.mono,.eyebrow{font:11px/1.6 Consolas,monospace;letter-spacing:2px;text-transform:uppercase}.eyebrow{color:var(--cyan)}.wrap{width:min(1320px,88%);margin:auto}nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:24px}.brand{font-size:24px;font-weight:900;letter-spacing:-1.5px}.brand i{color:var(--cyan);font-style:normal}nav .links{display:flex;gap:30px;font-size:12px;color:#b9c8df}.status{color:var(--cyan)}.status:before{content:'●';font-size:8px;margin-right:9px}.hero{position:relative;min-height:740px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}.hero video{position:absolute;right:0;top:0;width:70%;height:100%;object-fit:cover;opacity:.65}.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#060d1c 5%,#060d1ce0 35%,#060d1c10 80%),linear-gradient(0deg,#060d1c,transparent 40%);pointer-events:none}.hero-content{position:relative;z-index:1;padding:70px 0 110px}.hero h1{font-size:clamp(70px,9.8vw,146px);line-height:.86;letter-spacing:-.075em;margin:30px 0;font-weight:900}.hero h1 span{color:var(--cyan)}.hero p{max-width:380px;color:#b7c7dd;line-height:1.8;font-size:15px}.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;padding:17px 22px;background:var(--blue);border:1px solid var(--blue);color:white;font-size:12px}.button.secondary{background:#0a162a;border-color:#3a4b63}.hero-foot{position:absolute;bottom:25px;left:6%;right:6%;z-index:2;display:flex;justify-content:space-between;color:var(--muted)}.ribbon{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap;padding:24px;background:#0b1830;border-bottom:1px solid var(--line);color:#7894bb}.ribbon b{color:#d9e7fc;letter-spacing:2px;font-size:12px}section.chapter{padding:100px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:40px}.section-head p{max-width:320px;color:var(--muted);font-size:14px;line-height:1.8}h2{font-size:clamp(38px,5vw,70px);line-height:1.05;letter-spacing:-3px;margin:16px 0 0}.garage{position:relative;background:#101e35}.garage video{width:100%;height:540px;display:block;object-fit:cover}.garage-caption{display:flex;justify-content:space-between;align-items:center;padding:24px 30px;border:1px solid var(--line)}.garage-caption strong{font-size:20px}.garage-caption span{color:var(--muted)}.warzone{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.warzone p,.mind p{color:var(--muted);line-height:1.85;font-size:15px}.radar{position:relative;aspect-ratio:1;background:radial-gradient(circle,#17478555,transparent 67%),repeating-linear-gradient(0deg,transparent 0 39px,#1f365b55 40px),repeating-linear-gradient(90deg,transparent 0 39px,#1f365b55 40px);border:1px solid var(--line);overflow:hidden}.ring{position:absolute;inset:15%;border:1px solid #3a6798;border-radius:50%}.ring:before,.ring:after{content:'';position:absolute;inset:17%;border:1px solid #3a6798;border-radius:50%}.ring:after{inset:36%;background:#3b88ff30}.scan{position:absolute;inset:15%;border-radius:50%;background:conic-gradient(transparent 65%,#45b5ff45);animation:scan 9s linear infinite}.radar .cross{position:absolute;top:49%;left:47%;font-size:30px;color:var(--cyan)}.radar-label{position:absolute;left:24px;top:16px;color:var(--cyan)}.radar-bottom{position:absolute;bottom:22px;left:24px;right:24px;display:flex;justify-content:space-between}.blip{position:absolute;width:7px;height:7px;background:var(--cyan);box-shadow:0 0 20px var(--cyan);border-radius:50%;left:35%;top:33%}.blip.two{left:67%;top:60%}.traits{margin-top:30px;border-top:1px solid var(--line)}.trait{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:13px}.trait span{color:var(--muted)}.archive{display:grid;grid-template-columns:280px 1fr;border:1px solid var(--line);min-height:420px}.anime-tabs{display:flex;flex-direction:column;background:#0a1426}.anime-tabs button{padding:25px 22px;text-align:left;background:none;color:var(--muted);border:0;border-bottom:1px solid var(--line);font-size:14px}.anime-tabs button[aria-selected=true]{background:#1c43b5;color:white;border-left:3px solid var(--cyan)}.anime-tabs small{display:block;font:10px Consolas,monospace;margin-top:7px;letter-spacing:2px}.anime-panel{position:relative;overflow:hidden;padding:55px;background:radial-gradient(ellipse at right,#174dab70,transparent 70%)}.anime-symbol{position:absolute;right:18px;top:30px;font-size:230px;color:#5c9fff18;font-family:Georgia,serif;pointer-events:none}.anime-panel h3{position:relative;font-size:clamp(34px,4vw,54px);letter-spacing:-2px;max-width:500px;margin:30px 0 15px}.anime-panel p{position:relative;max-width:450px;color:#b6c8e3;line-height:1.8}.tag{display:inline-block;margin-top:25px;border:1px solid #426597;padding:9px 14px;font:10px Consolas,monospace;letter-spacing:2px;color:var(--cyan)}.mind{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.mind-quote{font-size:clamp(32px,4vw,58px);line-height:1.15;letter-spacing:-2px}.mind-quote em{color:var(--cyan);font-style:normal}.mind .note{font:11px Consolas,monospace;color:#6d86a9}.closing{padding:90px 0;text-align:center;background:radial-gradient(ellipse at bottom,#143d8d66,transparent 70%)}.closing h2{margin:20px 0 30px}footer{padding:25px 0;display:flex;justify-content:space-between;color:#7e94b3;border-top:1px solid var(--line)}.intro{min-height:100svh;display:grid;place-items:center;background:#020712;position:relative;padding:30px}.intro video{position:absolute;width:100%;height:100%;object-fit:contain}.intro-card{position:relative;text-align:center;padding:45px;background:#040c20dd;border:1px solid #315484;max-width:580px}.intro h1{font-size:clamp(38px,6vw,70px);letter-spacing:-3px;margin:20px 0}.intro .button{margin-top:20px}.intro-tools{position:absolute;bottom:28px;left:5%;right:5%;display:flex;justify-content:space-between;align-items:center}.intro-tools button{background:#071326cc;border:1px solid #335174;color:white;padding:12px 18px}.progress{position:absolute;bottom:0;left:0;height:3px;background:var(--cyan);width:0;transition:width .3s}.intro-message{color:#aec4e2;font-size:13px}#world{animation:arrive 1s ease both}@keyframes arrive{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes scan{to{transform:rotate(360deg)}}@media(max-width:760px){nav{height:75px}.status{display:none}nav .links{gap:15px;font-size:10px}.hero{min-height:680px}.hero video{width:100%;opacity:.4}.hero h1{font-size:85px}.hero:after{background:linear-gradient(90deg,#060d1ce0,#060d1c44),linear-gradient(0deg,#060d1c,transparent)}.hero-foot{font-size:9px}.warzone,.mind{grid-template-columns:1fr;gap:35px}.section-head{display:block}.garage video{height:320px}.garage-caption{padding:20px;gap:15px}.garage-caption span{font-size:10px}.archive{grid-template-columns:1fr}.anime-tabs{display:grid;grid-template-columns:1fr 1fr}.anime-tabs button{padding:17px;font-size:12px}.anime-panel{padding:30px;min-height:360px}section.chapter{padding:65px 0}footer{font-size:9px;gap:20px}.intro-card{padding:28px}.intro-tools .mono{font-size:9px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
-</style></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06090d">
+<meta name="description" content="The world of Krusor. Black Ops II, Warzone, Lamborghini nights and a lifetime of being absolutely certain.">
+<title>KRUSOR — You had to be there.</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer>
+</script>
+</head>
 <body>
-<div class="intro" id="intro"><video id="homepage-video" playsinline preload="metadata" aria-label="Krusor Airlines Lamborghini introduction"><source src="1108.mp4" type="video/mp4"></video><div class="intro-card" id="intro-card"><span class="eyebrow">Krusor Airlines / First class only</span><h1>Your departure<br>from ordinary.</h1><p class="intro-message" id="intro-message">One driver. A different altitude.</p><button class="button" id="takeoff-button">Prepare for take-off <span>↗</span></button></div><div class="intro-tools"><span class="mono">KR / Welcome aboard</span><div><button id="sound" hidden aria-pressed="false">Mute sound</button> <button id="skip">Enter the world ↗</button></div></div><div class="progress" id="progress"></div></div>
-<div id="world" hidden>
-<header class="wrap"><nav aria-label="Main navigation"><a class="brand" href="#top">KRUSOR<i>®</i></a><div class="links"><a href="#garage">The garage</a><a href="#warzone">The operator</a><a href="#anime">The archive</a></div><span class="mono status">Built different</span></nav></header>
-<main id="top"><section class="hero"><video id="hero-video" src="lambo_street.mp4" muted playsinline loop preload="none" aria-label="Krusor's Lamborghini on the street"></video><div class="wrap hero-content"><span class="eyebrow">The world of Krusor / Vol. 01</span><h1>FULL<br>THROTTLE.<br><span>ZERO LIMITS.</span></h1><p>A Lamborghini in the driveway. Warzone in the blood. An entire anime universe in his head.<br>Welcome to his world.</p><div class="actions"><a href="#garage" class="button">Explore the world <span>↗</span></a><button class="button secondary" id="replay">Replay the entrance <span>↺</span></button></div></div><div class="hero-foot mono"><span>Driven by obsession. Defined by taste.</span><span>Scroll to discover ↓</span></div></section>
-<div class="ribbon mono"><b>Italian engineering</b><span>✧</span><b>Verdansk veteran</b><span>✧</span><b>Main character energy</b><span>✧</span><b>Always thinking ahead</b></div>
-<div class="wrap"><section class="chapter" id="garage"><div class="section-head"><div><span class="eyebrow">01 / The garage</span><h2>Some things<br>need no introduction.</h2></div><p>Sharp lines. Unmistakable presence.<br>The Lamborghini is more than a car.<br>It’s the reason to take the long way home.</p></div><div class="garage"><video src="lambo_street.mp4" controls playsinline preload="metadata" aria-label="Watch the Lamborghini street film"></video><div class="garage-caption"><strong>Lamborghini. Unfiltered.</strong><span class="mono">The street film / Play with sound ↗</span></div></div></section>
-<section class="chapter warzone" id="warzone"><div class="radar" aria-hidden="true"><span class="radar-label mono">KR-01 / Operator archive</span><div class="ring"></div><div class="scan"></div><span class="cross">+</span><span class="blip"></span><span class="blip two"></span><div class="radar-bottom mono"><span>Verdansk<br>Never forgotten</span><span>One more drop.<br>Always.</span></div></div><div><span class="eyebrow">02 / The operator</span><h2>Prime was<br>a different era.</h2><p>Before the engine notes, there were squad comms. The late drops, the last circles, the “one more game” that somehow became sunrise. Some people played Warzone. Krusor lived for the clutch.</p><div class="traits"><div class="trait"><span>Home ground</span><strong>Verdansk</strong></div><div class="trait"><span>Default mentality</span><strong>Push. Reposition. Finish.</strong></div><div class="trait"><span>Squad folklore</span><strong>“You had to be there.”</strong></div></div></div></section>
-<section class="chapter" id="anime"><div class="section-head"><div><span class="eyebrow">03 / The anime archive</span><h2>Different worlds.<br>Same obsession.</h2></div><p>The transformations. The mind games. The heart of the cards. A personal hall of fame, with absolutely no filler.</p></div><div class="archive"><div class="anime-tabs" role="tablist" aria-label="Anime collection" aria-orientation="vertical"><button role="tab" id="tab-0" aria-controls="anime-panel" aria-selected="true" data-anime="0">Dragon Ball Z<small>01 / Beyond limits</small></button><button role="tab" id="tab-1" aria-controls="anime-panel" aria-selected="false" tabindex="-1" data-anime="1">Death Note<small>02 / The next move</small></button><button role="tab" id="tab-2" aria-controls="anime-panel" aria-selected="false" tabindex="-1" data-anime="2">Yu-Gi-Oh!<small>03 / The original</small></button><button role="tab" id="tab-3" aria-controls="anime-panel" aria-selected="false" tabindex="-1" data-anime="3">My Hero Academia<small>04 / Plus ultra</small></button></div><div class="anime-panel" id="anime-panel" role="tabpanel" aria-labelledby="tab-0" tabindex="0"><span class="anime-symbol" aria-hidden="true" id="anime-symbol">悟</span><span class="eyebrow" id="anime-kicker">The power to go further</span><h3 id="anime-title">There’s always<br>another level.</h3><p id="anime-copy">The training arcs. The impossible odds. The transformation that changes everything. Dragon Ball Z is the blueprint for refusing to stay where you are.</p><span class="tag" id="anime-tag">DRAGON BALL Z / LIMIT BREAKER</span></div></div></section>
-<section class="chapter mind"><div><span class="eyebrow">04 / The mind behind it</span><h2>Several moves ahead.<br>Obviously.</h2><p>A taste for strategy, an appetite for impossible odds, and a modest conviction that he’s already figured it all out. Whether it’s a final circle or a battle of wits, the plan is always there.</p><span class="note">Genius status: self-certified. Confidence: unquestionable.</span></div><div class="mind-quote">“It’s not overthinking<br>if you’re just<br><em>thinking faster.</em>”<p class="mono">— The Krusor philosophy</p></div></section></div>
-<section class="closing"><span class="eyebrow">You’ve entered the world</span><h2>Enjoy the ride.</h2><button class="button secondary" id="replay-bottom">One more take-off <span>↗</span></button></section></main><footer class="wrap mono"><span>© <span id="year"></span> Krusor / All personality. No apologies.</span><a href="#top">Back to the top ↑</a></footer></div><noscript><p>Please enable JavaScript to watch the intro and explore Krusor.</p></noscript>
-<script>
-const intro=document.getElementById('intro');
-const world=document.getElementById('world');
-const video=document.getElementById('homepage-video');
-const card=document.getElementById('intro-card');
-const start=document.getElementById('takeoff-button');
-const sound=document.getElementById('sound');
-const heroVideo=document.getElementById('hero-video');
-const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
-function enterWorld(){video.pause();intro.hidden=true;world.hidden=false;window.scrollTo(0,0);world.querySelector('a').focus({preventScroll:true});if(!reducedMotion.matches)heroVideo.play().catch(()=>{});}
-async function takeOff(){start.disabled=true;document.getElementById('intro-message').textContent='Preparing your departure…';try{await video.play();if(intro.hidden){video.pause();return;}card.hidden=true;sound.hidden=false;}catch{document.getElementById('intro-message').textContent='Playback couldn’t start. Try again or enter the world below.';}finally{start.disabled=false;}}
-function replay(){heroVideo.pause();world.hidden=true;intro.hidden=false;card.hidden=false;sound.hidden=true;video.currentTime=0;document.getElementById('progress').style.width='0%';document.getElementById('intro-message').textContent='One driver. A different altitude.';window.scrollTo(0,0);start.focus();}
-start.addEventListener('click',takeOff);
-video.addEventListener('ended',enterWorld);
-video.addEventListener('error',()=>{card.hidden=false;document.getElementById('intro-message').textContent='The film is unavailable. Enter the world below.';});
-video.addEventListener('timeupdate',()=>{document.getElementById('progress').style.width=(video.duration?video.currentTime/video.duration*100:0)+'%';});
-document.getElementById('skip').addEventListener('click',enterWorld);
-sound.addEventListener('click',()=>{video.muted=!video.muted;sound.textContent=video.muted?'Enable sound':'Mute sound';sound.setAttribute('aria-pressed',String(video.muted));});
-document.getElementById('replay').addEventListener('click',replay);
-document.getElementById('replay-bottom').addEventListener('click',replay);
-document.getElementById('year').textContent=new Date().getFullYear();
-const anime=[['悟','The power to go further','There’s always<br>another level.','The training arcs. The impossible odds. The transformation that changes everything. Dragon Ball Z is the blueprint for refusing to stay where you are.','DRAGON BALL Z / LIMIT BREAKER'],['L','Every move has a consequence','Intelligence is<br>the real weapon.','A notebook. Two extraordinary minds. A game where every detail matters. Death Note is for the part of him that has already thought through your next three moves.','DEATH NOTE / MIND GAMES'],['王','The original will always be iconic','Trust the deck.<br>Own the moment.','Yugi. Kaiba. The duel that comes down to one card. The original Yu-Gi-Oh! has a permanent place here — dramatic declarations and all.','YU-GI-OH! / HEART OF THE CARDS'],['力','Go beyond what’s possible','A little more<br>Plus Ultra.','Big dreams demand more than talent. My Hero Academia brings the grit, the heart, and the reminder that becoming your best self is an ongoing origin story.','MY HERO ACADEMIA / GO BEYOND']];
-const tabs=[...document.querySelectorAll('[data-anime]')];
-function selectAnime(index){tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1;});const item=anime[index];['anime-symbol','anime-kicker','anime-copy','anime-tag'].forEach((id,i)=>{document.getElementById(id).textContent=item[[0,1,3,4][i]];});document.getElementById('anime-title').innerHTML=item[2];document.getElementById('anime-panel').setAttribute('aria-labelledby','tab-'+index);}
-tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectAnime(index));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowDown'||event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowUp'||event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();selectAnime(next);tabs[next].focus();});});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)heroVideo.pause();else if(!world.hidden&&!reducedMotion.matches)heroVideo.play().catch(()=>{});});
-</script></body></html>
-
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<a class="brand" href="#top" aria-label="Krusor home">
+<img src="assets/logo.png" alt="">KRUSOR<span>.</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="#legacy">The legacy</a>
+<a href="#archive">The archive</a>
+<a href="#garage">The garage</a>
+<a href="#personality">The man</a>
+</nav>
+<a class="nav-twitch" href="https://www.twitch.tv/Krusor" target="_blank" rel="noopener">Twitch ↗</a>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="hero-art" aria-hidden="true">
+</div>
+<div class="hero-shade">
+</div>
+<div class="hero-content">
+<p class="eyebrow">The lobbies. The late nights. The legend.</p>
+<h1>YOU HAD<br>TO BE <em>THERE.</em>
+</h1>
+<p class="hero-copy">From nukes to MOABs. League Play to last circles.<br>A lifetime of backing himself. Usually loudly.</p>
+<div class="actions">
+<a class="button" href="#legacy">Enter the legacy <span>↓</span>
+</a>
+<a class="text-link" href="#films">Watch the films ↗</a>
+</div>
+</div>
+<div class="hero-bottom">
+<span>KRUSOR / THE PERSONAL ARCHIVE</span>
+<span>Still convinced he’s right.</span>
+<a href="#legacy" aria-label="Scroll to the legacy">↓</a>
+</div>
+</section>
+<div class="ticker">
+<span>MW2 <b>NUKES</b>
+</span>
+<i>✦</i>
+<span>MW3 <b>MOABS</b>
+</span>
+<i>✦</i>
+<span>BLACK OPS II <b>LEAGUE PLAY</b>
+</span>
+<i>✦</i>
+<span>BO2 <b>8s</b>
+</span>
+<i>✦</i>
+<span>WARZONE <b>ONE MORE DROP</b>
+</span>
+</div>
+<section class="section wrap" id="legacy">
+<div class="section-head">
+<div>
+<p class="eyebrow">A controller. Several eras.</p>
+<h2>THIS WAS NEVER<br>
+<em>JUST A GAME.</em>
+</h2>
+</div>
+<p>A brief introduction through Halo. Then Call of Duty happened, and the evenings were accounted for.</p>
+</div>
+<div class="career-tabs" role="tablist" aria-label="Gaming history">
+<button role="tab" id="era-0" aria-controls="era-panel" aria-selected="false" tabindex="-1">HALO</button>
+<button role="tab" id="era-1" aria-controls="era-panel" aria-selected="false" tabindex="-1">MW2</button>
+<button role="tab" id="era-2" aria-controls="era-panel" aria-selected="false" tabindex="-1">BLACK OPS</button>
+<button role="tab" id="era-3" aria-controls="era-panel" aria-selected="false" tabindex="-1">MW3</button>
+<button role="tab" id="era-4" aria-controls="era-panel" aria-selected="true" tabindex="0">BLACK OPS II</button>
+<button role="tab" id="era-5" aria-controls="era-panel" aria-selected="false" tabindex="-1">THE 8s</button>
+<button role="tab" id="era-6" aria-controls="era-panel" aria-selected="false" tabindex="-1">WARZONE</button>
+</div>
+<div class="era-panel" id="era-panel" role="tabpanel" aria-labelledby="era-4" tabindex="0">
+<div>
+<p class="eyebrow" id="era-label">The defining era</p>
+<h3 id="era-title">LEAGUE PLAY.<br>ON REPEAT.</h3>
+<p id="era-copy">Black Ops II was the one. The M8A1, the competition, the constant pull of another match. He didn’t casually dip into League Play. He grinded it.</p>
+<span class="chip" id="era-tag">Weapon of choice / M8A1</span>
+</div>
+<div class="era-mark" aria-hidden="true">
+<span id="era-mark">II</span>
+<small>THE KRUSOR YEARS</small>
+</div>
+</div>
+</section>
+<section class="bo2 section" id="archive">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">Black Ops II League Play / Standoff</p>
+<h2>ONE AGAINST FOUR.<br>
+<em>AND HE WON.</em>
+</h2>
+</div>
+<p>1v4 Search &amp; Destroy. Thirty kills. Four defuses. A 6–5 win.<br>They had the team. He had the scoreboard.</p>
+</div>
+<div class="clutch-banner"><strong>1<span>V</span>4</strong><div><p class="eyebrow">Outnumbered. Still the problem.</p><p>Four opponents. One Krusor.</p></div></div>
+<div class="score-stats">
+<div>
+<strong>30</strong>
+<span>KILLS</span>
+</div>
+<div>
+<strong>6</strong>
+<span>DEATHS</span>
+</div>
+<div>
+<strong>4</strong>
+<span>DEFUSES</span>
+</div>
+<div>
+<strong>6–5</strong>
+<span>FINAL SCORE</span>
+</div>
+</div>
+<button class="photo scoreboard" data-image="assets/standoff.jpg" data-caption="THE ORIGINAL RECEIPT" aria-label="Enlarge THE ORIGINAL RECEIPT">
+<img src="assets/standoff.jpg" alt="Original Black Ops II scoreboard showing Krusor with 30 kills, 6 deaths, 1 plant and 4 defuses" loading="lazy">
+<span>THE ORIGINAL RECEIPT<b>↗</b>
+</span>
+</button>
+<div class="death-count"><p class="eyebrow">Their deaths tell the story</p><div><strong>6 + 7 + 8 + 9 <span>= 30</span></strong><p>Thirty deaths across their team.<br>Thirty kills next to his name.</p></div><p class="clutch-line">THE WHOLE TEAM. ON HIS SCOREBOARD.</p></div>
+<div class="loadout">
+<div>
+<p class="eyebrow">The favourite</p>
+<h3>M8A1<span>.</span>
+</h3>
+</div>
+<p>Some weapons become part of a player’s identity.<br>For Krusor, it was this one.</p>
+<div class="burst" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</div>
+</div>
+</div>
+</section>
+<section class="section wrap" id="twitch">
+<div class="stream-grid">
+<div>
+<p class="eyebrow">From the Twitch archive</p>
+<h2>“I’LL GET<br>ANYONE<br>
+<em>A WIN.”</em>
+</h2>
+<p class="muted">His channel bio. His level of confidence.<br>Some things are remarkably consistent.</p>
+<div class="actions">
+<a class="button" href="https://www.twitch.tv/Krusor" target="_blank" rel="noopener">Visit Krusor on Twitch ↗</a>
+</div>
+</div>
+<div class="stream-card">
+<img src="assets/twitch-offline.png" alt="Krusor’s original black and electric-blue Twitch artwork" loading="lazy">
+<div class="stream-body">
+<div class="stream-name">
+<img src="assets/logo.png" alt="Krusor K logo">
+<div>
+<h3>KRUSOR</h3>
+<span>THE CHANNEL ARCHIVE</span>
+</div>
+</div>
+<p>Warzone years. Long sessions.<br>The familiar voice on the other end of the comms.</p>
+<div class="archive-links">
+<a href="https://www.twitch.tv/Krusor/clips?filter=clips&amp;range=all" target="_blank" rel="noopener">Browse clips ↗</a>
+<a href="https://www.twitch.tv/Krusor/videos" target="_blank" rel="noopener">Browse videos ↗</a>
+</div>
+</div>
+</div>
+</div>
+<div class="channel-record">
+<p>HIS TWITCH BIO’S ROLL CALL</p>
+<div>
+<strong>#1</strong>
+<span>UK on PlayStation for wins*</span>
+</div>
+<div>
+<strong>#7</strong>
+<span>UK on PS4 for kills*</span>
+</div>
+<small>*Historical claims from his channel bio. Game, date and leaderboard are unspecified.</small>
+</div>
+<details class="setup">
+<summary>The setup behind the streams <span>+</span>
+</summary>
+<p>As listed on his Twitch About page.</p>
+<dl>
+<div>
+<dt>CPU</dt>
+<dd>Intel Core i9-10900K</dd>
+</div>
+<div>
+<dt>GPU</dt>
+<dd>NVIDIA GeForce RTX 3090</dd>
+</div>
+<div>
+<dt>Memory</dt>
+<dd>64GB Corsair Vengeance LPX DDR4 3000MHz</dd>
+</div>
+<div>
+<dt>Motherboard</dt>
+<dd>MSI MEG Z490 ACE</dd>
+</div>
+<div>
+<dt>Case</dt>
+<dd>Corsair Crystal Series 570X RGB</dd>
+</div>
+<div>
+<dt>Cooling</dt>
+<dd>Corsair H115i RGB PRO XT, 280mm</dd>
+</div>
+<div>
+<dt>Monitor</dt>
+<dd>Alienware AW2521HFA</dd>
+</div>
+</dl>
+</details>
+</section>
+<section class="films section" id="films">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">Press play. Turn it up.</p>
+<h2>THE <em>FILMS.</em>
+</h2>
+</div>
+<p>Two films. All the presence.<br>Best experienced with the sound on.</p>
+</div>
+<div class="film-grid">
+<figure>
+<video controls playsinline preload="metadata" aria-label="Krusor Airlines film" src="1108.mp4">
+</video>
+<figcaption>
+<h3>KRUSOR AIRLINES</h3>
+<span>First class energy.</span>
+</figcaption>
+</figure>
+<figure>
+<video controls playsinline preload="metadata" poster="assets/car-4.jpg" aria-label="Lamborghini street film" src="lambo_street.mp4">
+</video>
+<figcaption>
+<h3>AFTER HOURS</h3>
+<span>The Lamborghini street film.</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="section wrap" id="garage">
+<div class="section-head">
+<div>
+<p class="eyebrow">Away from the lobby</p>
+<h2>SAME CONFIDENCE.<br>
+<em>DIFFERENT ENGINE.</em>
+</h2>
+</div>
+<p>The black Lamborghini.<br>The plate that makes it his.</p>
+</div>
+<div class="gallery">
+<button class="photo gallery-main" data-image="assets/car-4.jpg" data-caption="AFTER DARK" aria-label="Enlarge AFTER DARK">
+<img src="assets/car-4.jpg" alt="Black Lamborghini at night wearing the KRU50R plate" loading="lazy">
+<span>AFTER DARK<b>↗</b>
+</span>
+</button>
+<button class="photo " data-image="assets/car-3.jpg" data-caption="NIGHT STREETS" aria-label="Enlarge NIGHT STREETS">
+<img src="assets/car-3.jpg" alt="Lamborghini on a city street at night" loading="lazy">
+<span>NIGHT STREETS<b>↗</b>
+</span>
+</button>
+<button class="photo " data-image="assets/car-2.jpg" data-caption="THE EXIT" aria-label="Enlarge THE EXIT">
+<img src="assets/car-2.jpg" alt="Rear of the Lamborghini at night" loading="lazy">
+<span>THE EXIT<b>↗</b>
+</span>
+</button>
+<button class="photo " data-image="assets/car-0.jpg" data-caption="DAYLIGHT" aria-label="Enlarge DAYLIGHT">
+<img src="assets/car-0.jpg" alt="Lamborghini photographed in daylight" loading="lazy">
+<span>DAYLIGHT<b>↗</b>
+</span>
+</button>
+<button class="photo " data-image="assets/car-1.jpg" data-caption="ANOTHER ANGLE" aria-label="Enlarge ANOTHER ANGLE">
+<img src="assets/car-1.jpg" alt="Another daylight view of the Lamborghini" loading="lazy">
+<span>ANOTHER ANGLE<b>↗</b>
+</span>
+</button>
+</div>
+</section>
+<section class="personality section" id="personality">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">The man behind the gamertag</p>
+<h2>ALWAYS RIGHT.<br>
+<em>JUST ASK HIM.</em>
+</h2>
+</div>
+<p>Advice is optional. His opinion is final.<br>Confidence has never been in short supply.</p>
+</div>
+<div class="personality-grid">
+<div class="off-duty">
+<article>
+<span>GYM</span>
+<p>Another kind of grind. Every bit as serious.</p>
+</article>
+<article>
+<span>ANIME &amp; MARVEL</span>
+<p>Big battles. Bigger personalities. Plenty to have an opinion about.</p>
+</article>
+<article>
+<span>GOOD FOOD</span>
+<p>A different restaurant. Another reason to get everyone together.</p>
+</article>
+<article>
+<span>THE OCCASIONAL BOOK</span>
+<p>Even the loading screen gets a change of scenery.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="closing wrap">
+<p class="eyebrow">For everyone who was in the lobby</p>
+<h2>THE GAMES CHANGED.<br>
+<em>KRUSOR DIDN’T.</em>
+</h2>
+<p>The same confidence. The same competitive streak. The same mate.</p>
+<button id="we-know" class="secret" aria-live="polite">We know.</button>
+</section>
+</main>
+<footer class="wrap">
+<a class="brand" href="#top">
+<img src="assets/logo.png" alt="">KRUSOR<span>.</span>
+</a>
+<div class="socials">
+<a href="https://www.twitch.tv/Krusor" target="_blank" rel="noopener">Twitch ↗</a>
+<a href="https://www.tiktok.com/@krusorkrusor" target="_blank" rel="noopener">TikTok ↗</a>
+<a href="https://www.instagram.com/krusorkrusor/" target="_blank" rel="noopener">Instagram ↗</a>
+<a href="https://www.youtube.com/channel/UC7Zca6VYlYGjxMRGt-VGGEA" target="_blank" rel="noopener">YouTube ↗</a>
+<a href="https://twitter.com/KrusorKrusor" target="_blank" rel="noopener">X ↗</a>
+</div>
+<a class="back-top" href="#top">Back to top ↑</a>
+</footer>
+<dialog id="lightbox" aria-label="Photo viewer">
+<button class="close-lightbox" aria-label="Close photo viewer">Close ×</button>
+<img id="lightbox-image" alt="">
+<p id="lightbox-caption">
+</p>
+</dialog>
+</body>
+</html>
