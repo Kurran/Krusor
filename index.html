@@ -9,8 +9,8 @@
 <link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261115-fused-hero">
-<script src="script.js" defer>
+<link rel="stylesheet" href="style.css?v=20261115-lambo-film-hero">
+<script src="script.js?v=20261115-lambo-film-hero" defer>
 </script>
 </head>
 <body>
@@ -28,15 +28,17 @@
 <a class="nav-twitch" href="https://www.twitch.tv/Krusor" target="_blank" rel="noopener">Twitch ↗</a>
 </header>
 <main id="main">
-<section class="hero" id="top">
+<section class="hero" id="top" aria-label="Krusor Lamborghini introduction">
 <div class="hero-visual" aria-hidden="true">
-<img class="hero-car" src="assets/car-4.jpg" alt="" fetchpriority="high">
-<img class="hero-monogram" src="assets/logo.png" alt="">
+<video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/car-4.jpg" disablepictureinpicture tabindex="-1">
+<source src="lambo_street.mp4" type="video/mp4">
+</video>
 </div>
 <div class="hero-content">
-<p class="eyebrow">The lobbies. The late nights. The legend.</p>
-<h1>YOU HAD<br>TO BE <em>THERE.</em></h1>
-<p class="hero-copy">From nukes to MOABs. League Play to last circles.<br>Few words. No theatrics. Just the one who carried the team.</p>
+<div class="hero-brand-lockup">
+<img class="hero-brandmark" src="assets/logo.png" alt="">
+<h1 class="hero-wordmark">KRUSOR<span>.</span></h1>
+</div>
 </div>
 </section>
 <div class="ticker">
