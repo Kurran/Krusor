@@ -90,5 +90,25 @@ document.getElementById('we-know').addEventListener('click', event => {
   knowingIndex = (knowingIndex + 1) % knowingLines.length;
   event.currentTarget.innerHTML = knowingLines[knowingIndex];
 });
-const videos = [...document.querySelectorAll('video')];
+// Film playback controls exclude the ambient, muted Lamborghini hero.
+const videos = [...document.querySelectorAll('.film-grid video')];
 videos.forEach(video => video.addEventListener('play', () => videos.forEach(other => { if (other !== video) other.pause(); })));
+
+ 
+// Stop off-screen playback and honour visitors who prefer reduced motion.
+const heroFilm = document.querySelector('.hero-video');
+if (heroFilm) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroFilm.pause();
+    heroFilm.removeAttribute('autoplay');
+  } else if ('IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        heroFilm.play().catch(() => {});
+      } else {
+        heroFilm.pause();
+      }
+    }, { threshold: 0.05 });
+    heroObserver.observe(heroFilm);
+  }
+}
