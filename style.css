@@ -644,46 +644,23 @@ figure  {
    color:var(--muted);
 }
 .secret {
-   display:inline-flex;
-   align-items:center;
-   justify-content:center;
-   gap:14px;
-   min-height:54px;
+   display:inline-block;
+   min-height:48px;
    margin-top:30px;
-   padding:13px 22px;
-   border:1px solid #238da4;
-   background:#0c2a36;
-   color:#e6faff;
+   padding:10px 22px;
+   border:1px solid #406575;
+   background:transparent;
+   color:#d5e1e8;
    font-size:17px;
-   font-weight:700;
+   font-weight:600;
    cursor:pointer;
-   transition:background .2s,border-color .2s,transform .2s,box-shadow .2s;
 }
-.secret::after {
-   content:"↻";
-   font-size:22px;
-   line-height:1;
-   color:var(--blue);
-}
-.secret:hover {
-   background:#12465a;
-   border-color:var(--blue);
-   box-shadow:0 0 24px #12c7ed33;
-   transform:translateY(-2px);
-}
-.secret:active { transform:translateY(0); }
+.secret:hover { border-color:var(--blue); }
 .secret:focus-visible {
    outline:2px solid var(--blue);
    outline-offset:4px;
 }
 .secret em { font-style:italic; color:var(--blue); }
-.secret-hint {
-   margin:10px 0 0;
-   font-size:10px;
-   font-weight:700;
-   letter-spacing:1.8px;
-   color:#7997a6;
-}
 #secret-reply {
    font-size:18px;
    color:var(--blue);
