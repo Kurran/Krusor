@@ -84,10 +84,11 @@ document.querySelectorAll('[data-image]').forEach(button => {
 });
 document.querySelector('.close-lightbox').addEventListener('click', () => viewer.close());
 viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
-const knowingLines = ['We know.', 'We don’t <em>know</em>.', 'But we <em>know</em>.'];
+const knowingLines = ['We knew.', 'But we didn’t <em>know</em>.', 'But we knew.'];
 let knowingIndex = 0;
 document.getElementById('we-know').addEventListener('click', event => {
-  knowingIndex = (knowingIndex + 1) % knowingLines.length;
+  // After the initial statement, alternate only between the last two messages.
+  knowingIndex = knowingIndex === 1 ? 2 : 1;
   event.currentTarget.innerHTML = knowingLines[knowingIndex];
 });
 // Film playback controls exclude the ambient, muted Lamborghini hero.
